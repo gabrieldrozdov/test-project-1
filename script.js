@@ -102,7 +102,7 @@ function fetchDemo(src) {
 	activeDemo = src;
 	const editorTitle = document.querySelector('.editor-navbar-title');
 	editorTitle.innerText = src;
-	fetch(src)
+	fetch("projects/"+src)
 		.then((response) => response.text())
 		.then(code => {
 			cm.setValue(code);
