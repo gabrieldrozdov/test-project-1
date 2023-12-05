@@ -131,6 +131,15 @@
 						]
 					},
 					{
+						"id": "image-to-ascii-art",
+						"display-text": "Image to ASCII Art",
+						"desc": "",
+						"note": "",
+						"links": [
+							["Visit the site!", "https://www.asciiart.eu/image-to-ascii"]
+						]
+					},
+					{
 						"id": "text-to-ascii-art-generator",
 						"display-text": "Text to ASCII Art Generator",
 						"desc": "",
