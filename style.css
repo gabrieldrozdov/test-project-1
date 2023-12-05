@@ -967,6 +967,7 @@ body[data-orientation="1"] .unit-info {
 	display: grid;
 	gap: 20px;
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
 }
 body[data-orientation="1"] .unit-projects {
 	max-width: 1000px;
