@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test-project-1.html | Editor</title>
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Education, Creative Coding, Web Programming">
+	<meta name="description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
+	<meta property="og:url" content="https://testproject1.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="test-project-1.html">
+	<meta property="og:description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+	
+	<link rel="stylesheet" href="/style.css">
+
+	<!-- CodeMirror -->
+	<link rel="stylesheet" href="cm/lib/codemirror.css">
+	<script src="cm/lib/codemirror.js"></script>
+	<script src="cm/mode/htmlmixed/htmlmixed.js"></script>
+	<script src="cm/mode/xml/xml.js"></script>
+	<script src="cm/mode/css/css.js"></script>
+	<script src="cm/mode/javascript/javascript.js"></script>
+
+	<!-- CodeMirror addons -->
+	<link rel="stylesheet" href="cm/addon/hint/show-hint.css">
+	<script src="cm/addon/hint/show-hint.js"></script>
+	<script src="cm/addon/hint/anyword-hint.js"></script>
+	<script src="cm/addon/hint/xml-hint.js"></script>
+	<script src="cm/addon/hint/html-hint.js"></script>
+	<script src="cm/addon/hint/css-hint.js"></script>
+	<script src="cm/addon/hint/javascript-hint.js"></script>
+	<script src="cm/addon/edit/closetag.js"></script>
+	<script src="cm/addon/edit/closebrackets.js"></script>
+	<script src="cm/addon/selection/active-line.js"></script>
+	<script src="cm/addon/edit/matchbrackets.js"></script>
+	<script src="cm/addon/comment/comment.js"></script>
+	<script src="cm/addon/comment/continuecomment.js"></script>
+</head>
+<body>
+	<div class="demos" data-active="0">
+		<div class="demos-navbar">
+			<h3 class="demos-navbar-title">Pick a demo!</h3>
+			<button onclick="closeDemos()" class="demos-navbar-close"><span class="symbol">&#xe5cd;</span> Close</button>
+		</div>
+
+		<div class="demos-list">
+			<div class="demos-item" style="--primary: var(--pink);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+			<div class="demos-item" style="--primary: var(--green);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+			<div class="demos-item" style="--primary: var(--blue);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+			<div class="demos-item" style="--primary: var(--purple);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+			<div class="demos-item" style="--primary: var(--yellow);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+			<div class="demos-item" style="--primary: var(--red);">
+				<a href="/editor/" class="demos-link"><span class="symbol">&#xe66d;</span> test-project-1.html</a>
+				<a href="/editor/" target="_blank" class="demos-newtab"><span class="symbol">&#xe89e;</span> <span class="demos-newtab-text">Open in new tab</span></a>
+			</div>
+		</div>
+	</div>
+
+	<main class="editor">
+		<div class="editor-shortcuts" data-active="0" onclick="editorShortcuts();">
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">&#xeae7;</span>
+					<span>+</span>
+					<span style="transform: translateY(-.1em);">]</span>
+					<span class="editor-shortcut-or">or</span>
+					<span class="symbol">&#xeae6;</span>
+					<span>+</span>
+					<span style="transform: translateY(-.1em);">]</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Indent selection right
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">&#xeae7;</span>
+					<span>+</span>
+					<span style="transform: translateY(-.1em);">[</span>
+					<span class="editor-shortcut-or">or</span>
+					<span class="symbol">&#xeae6;</span>
+					<span>+</span>
+					<span style="transform: translateY(-.1em);">[</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Indent selection left
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">&#xeae7;</span>
+					<span>+</span>
+					<span style="transform: translateY(-.05em);">/</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Comment/uncomment selection
+				</div>
+			</div>
+			<div class="editor-shortcut">
+				<div class="editor-shortcut-keys">
+					<span class="symbol">&#xeae6;</span>
+					<span>+</span>
+					<span>space</span>
+				</div>
+				<div class="editor-shortcut-action">
+					Show suggestions (autocomplete)
+				</div>
+			</div>
+			<div class="editor-shortcuts-close">
+				<p><span class="symbol">&#xe5cd;</span> Click anywhere to close</p>
+			</div>
+		</div>
+		<div class="editor-navbar">
+			<h1 class="editor-navbar-title"><span class="editor-navbar-title-fade">Now editing:</span> <span class="editor-navbar-title-file">test-project-1.html</span></h1>
+			<a href="/" target="_blank" class="editor-navbar-info"><span class="symbol">&#xe3c9;</span> <span class="editor-navbar-info-text">Project Details</span></a>
+			<div class="editor-navbar-spacer"></div>
+			<button onclick="openDemos();" class="editor-navbar-btn"><span class="symbol">&#xe86f;</span> <span class="editor-navbar-btn-text">Demos</span></button>
+			<a href="/" target="_blank" class="editor-navbar-btn"><span class="symbol">&#xe88a;</span> <span class="editor-navbar-btn-text">Home</span></a>
+		</div>
+		<div class="editor-content">
+			<div class="editor-code">
+				<div class="editor-cm"></div>
+				<div class="editor-controls">
+					<button onclick="editorToggleWrapping();" style="--primary: var(--pink);"><span class="symbol">&#xf828;</span> <span class="editor-controls-label">Wrap Text</span></button>
+					<button onclick="editorFontsizeDown();" style="--primary: var(--green);"><span class="symbol">&#xeadd;</span> <span class="editor-controls-label">Decrease Text Size</span></button>
+					<button onclick="editorFontsizeUp();" style="--primary: var(--blue);"><span class="symbol">&#xeae2;</span> <span class="editor-controls-label">Increase Text Size</span></button>
+				</div>
+				<div class="editor-controls">
+					<button onclick="editorReset();" style="--primary: var(--yellow);"><span class="symbol">&#xf053;</span> <span class="editor-controls-label">Reset Changes</span></button>
+					<button onclick="editorDownload();" style="--primary: var(--purple);"><span class="symbol">&#xf090;</span> <span class="editor-controls-label">Download Code</span></button>
+					<button onclick="editorShortcuts();" style="--primary: var(--red);"><span class="symbol">&#xeae7;</span> <span class="editor-controls-label">Shortcuts</span></button>
+				</div>
+			</div>
+			<div class="editor-preview">
+				<iframe class="editor-iframe"></iframe>
+			</div>
+		</div>
+	</main>
+
+	<script src="editor.js"></script>
+</body>
+</html>

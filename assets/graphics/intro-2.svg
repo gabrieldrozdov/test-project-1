@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <rect width="1920" height="1080" fill="#1b1b1b" stroke-width="0"/>
-  <rect x="1010" y="100" width="810" height="880" rx="40" ry="40" fill="#282828" stroke-width="0"/>
-  <rect x="100" y="100" width="810" height="880" rx="40" ry="40" fill="#282828" stroke-width="0"/>
-  <rect x="120" y="120" width="770" height="840" rx="20" ry="20" fill="#353535" stroke-width="0"/>
-  <rect x="1030" y="120" width="770" height="840" rx="20" ry="20" fill="#353535" stroke-width="0"/>
-  <rect x="200" y="200" width="500" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="220" width="610" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="240" width="300" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="260" width="480" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="280" width="580" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="300" width="400" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="320" width="500" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="340" width="610" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="360" width="300" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="380" width="480" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="400" width="580" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="420" width="400" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="440" width="500" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="460" width="610" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="480" width="300" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="500" width="480" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="520" width="580" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="540" width="400" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="560" width="500" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="580" width="610" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="600" width="300" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="620" width="480" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="640" width="580" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="660" width="400" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="680" width="500" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="700" width="610" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <rect x="200" y="720" width="300" height="10" rx="5" ry="5" fill="#e5e5e5" stroke-width="0"/>
-  <circle cx="1306.837" cy="369.149" r="139.149" fill="#fdc03a" stroke-width="0"/>
-  <polygon points="1718.906 546.082 1456.816 671.87 1478.925 382 1718.906 546.082" fill="#5adee8" stroke-width="0"/>
-  <rect x="1169.771" y="556.546" width="230.758" height="230.758" transform="translate(297.401 -389.888) rotate(19.467)" fill="#ff734d" stroke-width="0"/>
+  <rect x="985" y="100" width="835" height="880" rx="5" ry="5" fill="#282828" stroke-width="0"/>
+  <rect x="1010" y="125" width="785" height="830" rx="5" ry="5" fill="#353535" stroke-width="0"/>
+  <rect x="100" y="100" width="835" height="880" rx="5" ry="5" fill="#282828" stroke-width="0"/>
+  <rect x="125" y="125" width="785" height="830" rx="5" ry="5" fill="#353535" stroke-width="0"/>
+  <g>
+    <rect x="200" y="265" width="580" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="285" width="500" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="305" width="635" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="325" width="450" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="345" width="600" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="365" width="400" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="385" width="200" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="405" width="580" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="425" width="500" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="445" width="350" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="465" width="450" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="485" width="600" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="505" width="400" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="525" width="500" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="545" width="580" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="565" width="500" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="585" width="100" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="605" width="450" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="625" width="600" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="645" width="400" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="665" width="200" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="685" width="580" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="705" width="500" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="725" width="635" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="745" width="450" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="765" width="600" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="785" width="400" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+    <rect x="200" y="805" width="540" height="10" rx="2" ry="2" fill="#e5e5e5" stroke-width="0"/>
+  </g>
+  <g>
+    <circle cx="1290.926" cy="384.569" r="139.149" fill="#fdc03a" stroke-width="0"/>
+    <polygon points="1702.995 561.502 1440.906 687.291 1463.015 397.42 1702.995 561.502" fill="#5adee8" stroke-width="0"/>
+    <rect x="1153.861" y="571.966" width="230.758" height="230.758" transform="translate(301.631 -383.704) rotate(19.467)" fill="#ff734d" stroke-width="0"/>
+  </g>
 </svg>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test-project-1.html | Unit 5</title>
+	<link rel="icon" type="png" href="/assets/meta/favicon.png">
+
+	<meta name="author" content="Gabriel Drozdov">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Education, Creative Coding, Web Programming">
+	<meta name="description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
+	<meta property="og:url" content="https://testproject1.gdwithgd.com/">
+	<meta name="og:title" property="og:title" content="test-project-1.html">
+	<meta property="og:description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
+	<meta property="og:image" content="/assets/meta/opengraph.jpg">
+
+	<link rel="stylesheet" href="/style.css">
+
+	<!-- Confetti -->
+	<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.10.1/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body data-orientation="1">
+	<nav class="navbar">
+		<div class="navbar-section">
+			<a href="/" class="navbar-btn"><span class="symbol">&#xe88a;</span> <span class="navbar-btn-text">test-project-1.html</span></a>
+		</div>
+		<div class="navbar-section navbar-unit">
+			<a class="navbar-arr" href="/units/4/"><span class="symbol">&#xe5c4;</span></a>
+			<div class="navbar-unit-title"><span class="navbar-unit-number">Unit 5</span> <span class="navbar-unit-name">Coming soon!</span></div>
+			<a class="navbar-arr" href="/units/6/"><span class="symbol">&#xe5c8;</span></a>
+		</div>
+		<div class="navbar-section navbar-links">
+			<a href="/editor/" target="_blank" class="navbar-btn" id="btn-editor"><span class="symbol">&#xe86f;</span> <span class="navbar-btn-text">Editor</span></a>
+			<button onclick="openProjects()" class="navbar-btn" id="btn-projects"><span class="symbol">&#xe9b0;</span> <span class="navbar-btn-text">Projects</span></button>
+		</div>
+	</nav>
+
+	<div class="toc" data-active="0">
+		<div class="toc-navbar">
+			<h3 class="toc-navbar-title">Pick a project!</h3>
+			<button onclick="closeProjects()" class="toc-navbar-close"><span class="symbol">&#xe5cd;</span> Close</button>
+		</div>
+
+		<a href="#/units/1/ascii-art" class="toc-project" style="--primary: var(--pink);">
+			<div class="toc-project-number">1.1</div>
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-project-thumbnail">
+			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> ascii-art.html</h4>
+			<div class="toc-project-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>What HTML is</li>
+					<li>How HTML responds to the browser window</li>
+					<li>Basic HTML syntax</li>
+				</ul>
+			</div>
+			<div class="toc-project-rating">
+				<h4>Difficulty</h4>
+				<div class="toc-project-rating-dots">
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+			</div>
+		</a>
+
+		<a href="/units/1/#concrete-poetry" class="toc-project" style="--primary: var(--pink);">
+			<div class="toc-project-number">1.2</div>
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-project-thumbnail">
+			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> concrete-poetry.html</h4>
+			<div class="toc-project-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>Coming soon!</li>
+				</ul>
+			</div>
+			<div class="toc-project-rating">
+				<h4>Difficulty</h4>
+				<div class="toc-project-rating-dots">
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+			</div>
+		</a>
+
+		<a href="/units/1/#self-portrait" class="toc-project" style="--primary: var(--pink);">
+			<div class="toc-project-number">1.3</div>
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-project-thumbnail">
+			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> self-portrait.html</h4>
+			<div class="toc-project-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>Coming soon!</li>
+				</ul>
+			</div>
+			<div class="toc-project-rating">
+				<h4>Difficulty</h4>
+				<div class="toc-project-rating-dots">
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+			</div>
+		</a>
+
+		<a href="/units/1/#blog-post" class="toc-project" style="--primary: var(--green);">
+			<div class="toc-project-number">1.4</div>
+			<img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg" class="toc-project-thumbnail">
+			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> blog-post.html</h4>
+			<div class="toc-project-outcomes">
+				<h4>What you’ll learn</h4>
+				<ul>
+					<li>Coming soon!</li>
+				</ul>
+			</div>
+			<div class="toc-project-rating">
+				<h4>Difficulty</h4>
+				<div class="toc-project-rating-dots">
+					<div data-active="1"></div>
+					<div data-active="1"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+					<div data-active="0"></div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<button class="layout-toggle" onclick="switchOrientation();">
+		<span class="symbol">&#xebee;</span>
+	</button>
+
+	<header class="unit" id="unit-1">
+		<div class="unit-info">
+			<div class="unit-number">
+				Unit <span>5</span>
+			</div>
+			<h1 class="unit-title">
+				Coming soon!
+			</h1>
+			<p class="unit-desc">
+				Check back later for updates!
+			</p>
+		</div>
+	</header>
+
+	<footer class="footer">
+		<div>
+			<div class="footer-copyright">
+				© <span id="footer-year">2023</span> GD with GD<br>
+				All Rights Reserved
+			</div>
+			<div class="footer-credits">
+				Site design and development by <a href="https://gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a>
+			</div>
+			<div class="footer-credits">
+				Typeset in Red Hat Mono and Text by <a href="https://mckltype.com/" target="_blank">Jeremy Mickel (MCKL)</a>
+			</div>
+		</div>
+		<div class="footer-links">
+			<h2>Units</h2>
+			<div>
+				<a href="/units/1/"><span class="symbol">&#xe3c9;</span> <span>Unit 1: What even is a website?</span></a>
+				<a href="/units/2/"><span class="symbol">&#xe3c9;</span> <span>Unit 2: Coming soon!</span></a>
+				<a href="/units/3/"><span class="symbol">&#xe3c9;</span> <span>Unit 3: Coming soon!</span></a>
+				<a href="/units/4/"><span class="symbol">&#xe3c9;</span> <span>Unit 4: Coming soon!</span></a>
+				<a href="/units/5/"><span class="symbol">&#xe3c9;</span> <span>Unit 5: Coming soon!</span></a>
+				<a href="/units/6/"><span class="symbol">&#xe3c9;</span> <span>Unit 6: Coming soon!</span></a>
+			</div>
+		</div>
+		<div class="footer-links">
+			<h2>More from GD with GD</h2>
+			<div>
+				<a target="_blank" href="https://babysteps.gdwithgd.com/"><span class="symbol">&#xe157;</span> <span>Baby Steps</span></a>
+				<a target="_blank" href="https://noreplica.com/"><span class="symbol">&#xe157;</span> <span>No Replica</span></a>
+				<a target="_blank" href="https://toomuchtype.com/"><span class="symbol">&#xe157;</span> <span>Too Much Type</span></a>
+				<!-- <a target="_blank" href="https://gdwithgd.com/"><span class="symbol">&#xe157;</span> <span>GD with GD</span></a> -->
+				<!-- <a target="_blank" href="https://tsio.org/"><span class="symbol">&#xe157;</span> <span>TSIO</span></a> -->
+			</div>
+		</div>
+	</footer>
+
+	<script src="/script.js"></script>
+</body>
+</html>

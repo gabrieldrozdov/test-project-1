@@ -15,7 +15,7 @@ function closeProjects() {
 	const toc = document.querySelector('.toc');
 	toc.dataset.active = 0;
 }
-for (let tocLink of document.querySelectorAll('.toc-link')) {
+for (let tocLink of document.querySelectorAll('.toc-project')) {
 	tocLink.addEventListener('click', closeProjects);
 }
 
@@ -38,125 +38,6 @@ function checkGradientVisibilities() {
 }
 window.addEventListener('resize', checkGradientVisibilities);
 
-// Toggle editor
-let alertShown = false;
-function openEditor(src) {
-	if (src != undefined) {
-		fetchDemo(src);
-		if (!alertShown) {
-			alertShown = true;
-			setTimeout(() => {
-				showAlert();
-			}, 500)
-		}
-	}
-
-	const editor = document.querySelector('.editor');
-	editor.dataset.active = 1;
-}
-function closeEditor() {
-	const editor = document.querySelector('.editor');
-	editor.dataset.active = 0;
-}
-
-// Show instructions for how to reopen demo
-function showAlert() {
-	const alert = document.querySelector('.alert');
-	alert.dataset.active = 1;
-	const btnEditor = document.querySelector('#btn-editor');
-	btnEditor.dataset.highlight = 1;
-}
-function hideAlert() {
-	const alert = document.querySelector('.alert');
-	alert.dataset.active = 0;
-	const btnEditor = document.querySelector('#btn-editor');
-	btnEditor.dataset.highlight = 0;
-}
-
-// Generate editor
-let cm;
-let activeDemo = 'test.html';
-function generateEditor() {
-	const editor = document.querySelector('.editor-cm');
-	cm = CodeMirror(editor, {
-		mode: "htmlmixed",
-		value: '<h1>Hello World!</h1>',
-		autoCloseTags: true,
-		autoCloseBrackets: true,
-		matchBrackets: true,
-		smartIndent: true,
-		lineNumbers: true,
-		tabSize: 2,
-		showHint: true,
-		extraKeys: {"Ctrl-Space": "autocomplete"},
-		lineWrapping: false,
-		theme: "gdwithgd",
-	});
-	cm.on("change", updatePreview);
-	updatePreview();
-	fetchDemo('test.html');
-}
-generateEditor();
-
-function fetchDemo(src) {
-	activeDemo = src;
-	const editorTitle = document.querySelector('.editor-navbar-title');
-	editorTitle.innerText = src;
-	fetch("projects/"+src)
-		.then((response) => response.text())
-		.then(code => {
-			cm.setValue(code);
-		})
-}
-
-function updatePreview() {
-	const preview = document.querySelector('.editor-iframe');
-	preview.srcdoc = cm.getValue();
-}
-
-// Editor controls
-let lineWrap = false;
-function editorToggleWrapping() {
-	lineWrap = !lineWrap;
-	cm.setOption('lineWrapping', lineWrap);
-}
-let editorFontsize = 16;
-function editorFontsizeDown() {
-	const editorCM = document.querySelector('.editor-cm');
-	editorFontsize -= 2;
-	if (editorFontsize <= 8) {
-		editorFontsize = 8;
-	}
-	editorCM.style.setProperty('--font-size', editorFontsize + 'px');
-}
-function editorFontsizeUp() {
-	const editorCM = document.querySelector('.editor-cm');
-	editorFontsize += 2;
-	if (editorFontsize >= 24) {
-		editorFontsize = 24;
-	}
-	editorCM.style.setProperty('--font-size', editorFontsize + 'px');
-}
-function editorReset() {
-	fetchDemo(activeDemo);
-}
-function editorDownload() {
-	let codeBlob = new Blob([ cm.getValue()], { type: 'text/html' })
-	blobURL = URL.createObjectURL(codeBlob);
-	let tempLink = document.createElement("a");
-	tempLink.href = blobURL;
-	tempLink.download = activeDemo;
-	tempLink.click();
-}
-function editorShortcuts() {
-	const shortcuts = document.querySelector('.editor-shortcuts');
-	if (parseInt(shortcuts.dataset.active) == 1) {
-		shortcuts.dataset.active = 0;
-	} else {
-		shortcuts.dataset.active = 1;
-	}
-}
-
 // Highlight resource
 let activeResource = '';
 function highlightResource(id) {
@@ -173,4 +54,82 @@ function highlightResource(id) {
 			}
 		}
 	}, 100)
+}
+
+// Switch page orientation (1- or 2-column)
+function switchOrientation() {
+	const body = document.querySelector('body');
+	if (parseInt(body.dataset.orientation) == 1) {
+		body.dataset.orientation = 0;
+	} else {
+		body.dataset.orientation = 1;
+	}
+}
+
+// Confetti to celebrate finishing a unit
+const confettiCount = 200,
+defaults = {
+	spread: 360,
+	origin: { y: .5 },
+	ticks: 100,
+	gravity: 0,
+	decay: 0.94,
+	startVelocity: 30,
+	colors: ["#f3a8dd", "#98db6b", "#fdc03a", "#a690fc", "#5adee8", "#ff734d"],
+	shapes: ["circle"],
+};
+
+function fire(particleRatio, opts) {
+	confetti(
+		Object.assign({}, defaults, opts, {
+		particleCount: Math.floor(confettiCount * particleRatio),
+		})
+	);
+}
+
+let delayYay = false;
+function confettiFire() {
+	// SFX
+	let pop = new Audio("/assets/sounds/pop.wav");
+	pop.play();
+	setTimeout(() => {
+		if (!delayYay) {
+			let yay = new Audio("/assets/sounds/yay.mp4");
+			yay.play();
+			delayYay = true;
+			setTimeout(() => {
+				delayYay = false;
+			}, 1000)
+		}
+	}, 300)
+
+	// Confetti blast
+	fire(0.25, {
+		spread: 360,
+		startVelocity: 55,
+	});
+	fire(0.2, {
+		spread: 60,
+	});
+	fire(0.35, {
+		spread: 300,
+		decay: 0.91,
+		scalar: 0.8,
+	});
+	fire(0.1, {
+		spread: 120,
+		startVelocity: 25,
+		decay: 0.92,
+		scalar: 1.2,
+	});
+	fire(0.1, {
+		spread: 120,
+		startVelocity: 45,
+	});
+}
+
+// Set current year in the footer
+const footerYear = document.querySelector('#footer-year');
+if (footerYear != undefined) {
+	footerYear.innerText = new Date().getFullYear();
 }
