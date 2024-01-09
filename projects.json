@@ -8,11 +8,12 @@
 			"Basic HTML syntax"
 		],
 		"rating": 0,
-		"lead-in": "Here’s your first project:",
-		"prompt": "Create a website that changes when a user resizes the browser window.",
+		"lead-in": "Learn how code works:",
+		"prompt": "Create a piece of ASCII art in HTML",
 		"desc": {
-			"Background": "<p>One way in which websites are unique is their ability to take on many forms to fit any screen size. To accomplish this, websites are less like images or books, and more like instructions for creating an image or book. Those instructions are written as code in the form of <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html`)'>HTML</span>.</p><p>HTML is the backbone of the web. It’s a <em>programming language</em>, which means that computers can read it like a set of instructions to display information on your screen. Unlike traditional languages, programming languages have to follow super precise rules to be understood by computers. We call these rules the language’s <em>syntax</em>. HTML’s syntax is structured around <em>HTML tags</em>, which create <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-elements`)'>HTML elements</span>.</p>",
-			"Questions to Explore": "<p><em>What happens if you try to press “return” or ”enter” to <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-br`)'>break</span> to a new line?</em></p><p><em>What happens if you try to add multiple spaces in a row? (Hint: nothing happens! How can you add multiple <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-entities`)'>spaces</span> in a row?)</em></p><p><em>How can you <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-em`)'>italicize</span> or <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-strong`)'>bold</span> text?</em></p><p><em>Is everything in your HTML file <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-comments`)'>visible</span> on the live website?</em></p>"
+			"Prompt": "<p>In this exercise, we won’t care what the live website looks like. Instead, our goal is to create art inside the code itself. We’ll do this by using letters and punctuation marks to create something called <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-ascii-art-wikipedia`)'>ASCII art</span>. The term <em>ASCII</em> stands for “American Standard Code for Information Interchange” and is a protocol that converts a computer’s binary into normal letters.</p><p>Using only the letters, numbers, and symbols on your keyboard, create an image of your choosing! If you want some inspiration, check out the <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-ascii-art-archive`)'>ASCII Art Archive</span> or one of the generators linked to for this exercise. What you create is up to you — a drawing, an icon, or maybe even some <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-text-to-ascii-art-generator`)'>word art</span>!</p>",
+			"Background": "<p>What is a website? At the most basic level, a website is made out of code. Code is just text — specifically, text without any formatting, a.k.a. <em>plain text</em> — that tells a computer how to do something. There are many languages for code depending on the computer and context, just like there are more languages for writing and speaking to other people. For websites, the main <em>programming language</em> is <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html`)'>HTML</span>.</p><p>HTML is all about organizing information for a web browser to understand. HTML accomplishes this by organizing types of information into things called  <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-elements`)'>HTML elements</span>. Typically, HTML elements are denoted by a start and end point. These are called <em>HTML tags</em> and are indicated inside of angle brackets (i.e. the &lt; and &gt; symbols). For example, you can indicate that some text should be emphasized using the <em>em</em> element, which would look like this:</p><p>&lt;em&gt;<em>Here’s some italicized text</em>&lt;/em&gt;</p><p>But, you don’t see HTML tags on live websites — they’re invisible! When we design and develop websites, we provide instructions to the web browser and have to trust it to understand what we want.</p>",
+			"Questions to Explore": "<p><em>What happens if you try to press “return” or ”enter” to <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-br`)'>break</span> to a new line?</em></p><p><em>What happens if you try to add multiple spaces in a row? (Hint: nothing happens! How can you add multiple <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-entities`)'>spaces</span> in a row?)</em></p><p><em>How can you <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-em`)'>italicize</span> or <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-strong`)'>bold</span> text on the live website?</em></p><p><em>Is everything in your HTML file <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-comments`)'>visible</span> on the live website?</em></p>"
 		},
 		"demo": "ascii-art-example.html",
 		"demos": [
@@ -122,6 +123,15 @@
 				"icon": "&#xe157;",
 				"blocks": [
 					{
+						"id": "ascii-art-wikipedia",
+						"display-text": "Wikipedia article on ASCII art",
+						"desc": "",
+						"note": "",
+						"links": [
+							["Read the article!", "https://en.wikipedia.org/wiki/ASCII_art"]
+						]
+					},
+					{
 						"id": "ascii-art-archive",
 						"display-text": "ASCII Art Archive",
 						"desc": "",
@@ -159,11 +169,10 @@
 			"TBD"
 		],
 		"rating": 0,
-		"lead-in": "Here’s your second project:",
-		"prompt": "TBD",
+		"lead-in": "Play with typography:",
+		"prompt": "Typeset a poem in HTML and CSS",
 		"desc": {
-			"Background": "<p>Pick a poem from the <a href='https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added' target='_blank'>Poetry Foundation archives</a>. Typeset your poem using HTML elements and inline CSS. You’ll probably end up with something that looks like it’s out of a <a href='https://images.app.goo.gl/iWiyk7qP8Qpoe8ZA6' target='_blank'>Geronimo Stilton book</a>.</p>",
-			"Questions to Explore": "<p>Coming soon!</p>"
+			"Prompt": "<p>Pick a poem from the <a href='https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added' target='_blank'>Poetry Foundation archives</a>. Typeset your poem using HTML elements and inline CSS.</p><p>Think about the design decisions that make sense for the poem you choose. Maybe you only want to make a few subtle changes to the default typography. Or, maybe you want something that looks like it’s out of a <a href='https://images.app.goo.gl/iWiyk7qP8Qpoe8ZA6' target='_blank'>Geronimo Stilton book</a>. That’s your decision!</p>"
 		},
 		"demo": "concrete-poetry-example.html",
 		"demos": [
@@ -424,11 +433,10 @@
 			"TBD"
 		],
 		"rating": 0,
-		"lead-in": "Here’s your third project:",
-		"prompt": "TBD",
+		"lead-in": "Beyond typography:",
+		"prompt": "Code a self-portrait using &lt;div&gt; elements and absolute positioning",
 		"desc": {
-			"Background": "<p>On a piece of paper, draw a simple self-portrait using rectangles and ovals. I recommend using no more than 10–15 shapes total. Use as many colors as you want, and decided whether your shapes should be filled-in, outlined, or both.</p><p>Then, using only &lt;div&gt; elements and inline CSS, recreate your self-portrait on a website.</p>",
-			"Questions to Explore": "<p>Coming soon!</p>"
+			"Prompt": "<p>Using only &lt;div&gt; elements and inline CSS, recreate your self-portrait on a website. You can position an element anywhere on the page by setting its CSS “position” property to ”absolute” and then using a combination of the “top”, “right”, “bottom”, and “left” properties.</p><p>If you’re having trouble getting started, I recommend starting by drawing a simple self-portrait using rectangles and ovals on a piece of paper. Use as many colors as you want, and decie whether your shapes should be filled-in, outlined, or both.</p>"
 		},
 		"demo": "self-portrait-example.html",
 		"demos": [
@@ -657,29 +665,28 @@
 			}
 		}
 	},
-	"blog-post.html": {
+	"wikipedia-article.html": {
 		"unit": 1,
 		"number": "1.4",
 		"outcomes": [
 			"TBD"
 		],
 		"rating": 1,
-		"lead-in": "Here’s your fourth project:",
-		"prompt": "TBD",
+		"lead-in": "Thinking about the user:",
+		"prompt": "Design the page for a Wikipedia article",
 		"desc": {
-			"Background": "<p>Coming soon!</p>",
-			"Questions to Explore": "<p>Coming soon!</p>"
+			"Background": "<p>Coming soon!</p>"
 		},
-		"demo": "blog-post-example.html",
+		"demo": "wikipedia-article-example.html",
 		"demos": [
 			{
 				"number": "1.4.1",
-				"name": "blog-post-example.html",
+				"name": "wikipedia-article-example.html",
 				"desc": "See the code for a finished project"
 			},
 			{
 				"number": "1.4.2",
-				"name": "blog-post-template.html",
+				"name": "wikipedia-article-template.html",
 				"desc": "Start the project using a template"
 			}
 		],

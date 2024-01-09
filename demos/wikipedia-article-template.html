@@ -1,0 +1,236 @@
+<!-- This demo features an HTML template created in VS Code -->
+<!-- To get the template, create a new [your name here].html file in VS Code, and then press ! and ENTER -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TODO: Add your title here!</title>
+
+	<!-- All CSS goes inside the <style> element! -->
+	<style>
+
+		/* This resets some CSS defaults that make things harder to work with */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			scroll-behavior: smooth;
+		}
+
+		/* Loading in a custom font! */
+		/* Jakarta is a variable font with a "wght" axis */
+		/* We can use the "font-weight" CSS property to specify any weight between 200 and 800 */
+		@font-face {
+			font-family: 'Jakarta';
+			src: url('/assets/demos/wikipedia-template/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'Jakarta';
+			src: url('/assets/demos/wikipedia-template/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf');
+			font-style: italic;
+		}
+
+		/* All visible content lives inside the <body> element */
+		body {
+			font-family: 'Jakarta', sans-serif;
+			background-color: #efefef;
+			color: #2f2f2f; /* font color */
+		}
+
+		/* Our article will live inside this container */
+		.container {
+			/* Set the size of the article */
+			max-width: 1000px;
+			width: 100%;
+			margin: auto;
+
+			padding: 120px 80px; /* top padding, side padding */
+			background-color: #fafafa;
+		}
+
+		/* Basic mobile responsiveness */
+		@media only screen and (max-width: 800px) {
+			.container {
+				padding: 80px 20px; /* top padding, side padding */
+			}
+		}
+
+		/* Text styles */
+		h1 {
+			font-size: 64px;
+			line-height: 1em;
+			font-weight: 200;
+			margin-bottom: 30px;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h2 {
+			font-size: 14px;
+			line-height: 1em;
+			font-weight: 800;
+			letter-spacing: .05em;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h3 {
+			font-size: 24px;
+			line-height: 1em;
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-weight: 500;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p {
+			margin-bottom: 20px;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.4em;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		a {
+			color: black;
+		}
+		a:hover {
+			opacity: .5;
+		}
+		sup {
+			font-size: .6em;
+			line-height: 0;
+			font-weight: 800;
+		}
+		sup a {
+			text-decoration: none;
+		}
+		sup a:hover {
+			opacity: .5;
+		}
+
+		/* Image styles (for your charts!) */
+		figure {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+		/* Image captions */
+		figcaption {
+			font-size: 14px;
+			font-style: italic;
+			font-weight: 350;
+			margin-top: 20px;
+			margin-bottom: 40px;
+			opacity: .5;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		/* Endnotes */
+		.endnotes {
+			padding-top: 20px;
+			border-top: 1px solid black;
+			margin-top: 80px;
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.4em;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			list-style: none;
+		}
+		.endnotes li {
+			margin-top: 5px;
+			font-weight: 350;
+		}
+	</style>
+</head>
+
+<!-- All visible content goes inside the <body> element! -->
+<body>
+	
+	<div class="container">
+		<h1>
+			A wikipedia article
+		</h1>
+		<h2>
+			Some sort of subtitle
+		</h2>
+
+		<p>
+			This is some text! <strong>This is bold text!</strong> <em>This is italic text!</em> <strong><em>This is bold AND italic text!</em></strong> <a href="">This is a link!</a> This is something with a reference attached to it!<sup><a href="#endnote-1">[1]</a></sup> This is another thing with a reference attached to it!<sup><a href="#endnote-2">[2]</a></sup> This is a third!<sup><a href="#endnote-3">[3]</a></sup> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<figure>
+			<img src="/assets/demos/wikipedia-template/images/placeholder.png">
+			<figcaption>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</figcaption>
+		</figure>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<h3>
+			A subsection heading
+		</h3>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<figure>
+			<img src="/assets/demos/wikipedia-template/images/placeholder.png">
+			<figcaption>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</figcaption>
+		</figure>
+
+		<h3>
+			A subsection heading
+		</h3>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+
+		<ul class="endnotes">
+			<li id="endnote-1">
+				<sup>[1]</sup> This is an endnote!
+			</li>
+			<li id="endnote-2">
+				<sup>[2]</sup> This is another endnote!
+			</li>
+			<li id="endnote-3">
+				<sup>[3]</sup> This is a third endnote!
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
