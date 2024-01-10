@@ -35,15 +35,15 @@ let demos = {
 		'color': 'pink',
 		'project': '/units/1/#self-portrait'
 	},
-	'blog-post-example.html': {
+	'wikipedia-article-example.html': {
 		'number': '1.4.1',
 		'color': 'blue',
-		'project': '/units/1/#blog-post'
+		'project': '/units/1/#wikipedia-article'
 	},
-	'blog-post-template.html': {
+	'wikipedia-article-template.html': {
 		'number': '1.4.2',
 		'color': 'blue',
-		'project': '/units/1/#blog-post'
+		'project': '/units/1/#wikipedia-article'
 	},
 }
 
