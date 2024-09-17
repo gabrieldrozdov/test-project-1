@@ -1,395 +1,851 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>test-project-1.html</title>
-	<link rel="icon" type="png" href="/assets/meta/favicon.png">
 
-	<meta name="author" content="Gabriel Drozdov">
-	<meta name="keywords" content="HTML, CSS, JavaScript, Education, Creative Coding, Web Programming">
-	<meta name="description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
-	<meta property="og:url" content="https://testproject1.gdwithgd.com/">
-	<meta name="og:title" property="og:title" content="test-project-1.html">
-	<meta property="og:description" content="Creative web projects that’ll teach you HTML, CSS, and JavaScript.">
-	<meta property="og:image" content="/assets/meta/opengraph.jpg">
-
-	<link rel="stylesheet" href="/style.css">
-</head>
-<body>
-	<nav class="navbar">
-		<div class="navbar-section">
-			<a href="/" class="navbar-btn"><span class="symbol">&#xe88a;</span> <span class="navbar-btn-text">test-project-1.html</span></a>
-		</div>
-		<div class="navbar-section navbar-unit">
-		</div>
-		<div class="navbar-section navbar-links">
-			<a href="editor/" target="_blank" class="navbar-btn" id="btn-editor"><span class="symbol">&#xe86f;</span> <span class="navbar-btn-text">Editor</span></a>
-			<button onclick="openProjects()" class="navbar-btn" id="btn-projects"><span class="symbol">&#xe9b0;</span> <span class="navbar-btn-text">Projects</span></button>
-		</div>
-	</nav>
-
-	<div class="toc" data-active="0">
-		<div class="toc-navbar">
-			<h3 class="toc-navbar-title">Pick a project!</h3>
-			<button onclick="closeProjects()" class="toc-navbar-close"><span class="symbol">&#xe5cd;</span> Close</button>
-		</div>
-
-		<a href="/units/1/#ascii-art" class="toc-project" style="--primary: var(--pink);">
-			<div class="toc-project-number">1.1</div>
-			<img src="/assets/graphics/placeholder.svg" class="toc-project-thumbnail">
-			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> ascii-art.html</h4>
-			<div class="toc-project-outcomes">
-				<h4>What you’ll learn</h4>
-				<ul>
-					<li>What HTML is</li>
-					<li>How HTML responds to the browser window</li>
-					<li>Basic HTML syntax</li>
-				</ul>
-			</div>
-			<div class="toc-project-rating">
-				<h4>Difficulty</h4>
-				<div class="toc-project-rating-dots">
-					<div data-active="1"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-				</div>
-			</div>
-		</a>
-
-		<a href="/units/1/#concrete-poetry" class="toc-project" style="--primary: var(--pink);">
-			<div class="toc-project-number">1.2</div>
-			<img src="/assets/graphics/placeholder.svg" class="toc-project-thumbnail">
-			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> concrete-poetry.html</h4>
-			<div class="toc-project-outcomes">
-				<h4>What you’ll learn</h4>
-				<ul>
-					<li>Coming soon!</li>
-				</ul>
-			</div>
-			<div class="toc-project-rating">
-				<h4>Difficulty</h4>
-				<div class="toc-project-rating-dots">
-					<div data-active="1"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-				</div>
-			</div>
-		</a>
-
-		<a href="/units/1/#self-portrait" class="toc-project" style="--primary: var(--pink);">
-			<div class="toc-project-number">1.3</div>
-			<img src="/assets/graphics/placeholder.svg" class="toc-project-thumbnail">
-			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> self-portrait.html</h4>
-			<div class="toc-project-outcomes">
-				<h4>What you’ll learn</h4>
-				<ul>
-					<li>Coming soon!</li>
-				</ul>
-			</div>
-			<div class="toc-project-rating">
-				<h4>Difficulty</h4>
-				<div class="toc-project-rating-dots">
-					<div data-active="1"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-				</div>
-			</div>
-		</a>
-
-		<a href="/units/1/#blog-post" class="toc-project" style="--primary: var(--green);">
-			<div class="toc-project-number">1.4</div>
-			<img src="/assets/graphics/placeholder.svg" class="toc-project-thumbnail">
-			<h4 class="toc-project-title"><span class="symbol">&#xe3c9;</span> blog-post.html</h4>
-			<div class="toc-project-outcomes">
-				<h4>What you’ll learn</h4>
-				<ul>
-					<li>Coming soon!</li>
-				</ul>
-			</div>
-			<div class="toc-project-rating">
-				<h4>Difficulty</h4>
-				<div class="toc-project-rating-dots">
-					<div data-active="1"></div>
-					<div data-active="1"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-					<div data-active="0"></div>
-				</div>
-			</div>
-		</a>
-	</div>
-
-	<header class="header">
-		<div class="intro">
-			<h1 style="--primary: var(--pink);" class="header-elmnt" data-color="0"><a href="#tutorial" class="header-title"><span class="symbol">&#xe3c9;</span> test-project-1.html</a></h1>
-			<h2 class="header-callout">
-				<span style="--primary: var(--green);" class="header-elmnt" data-color="1">Make</span> <span style="--primary: var(--blue);" class="header-elmnt" data-color="2">Art</span>
-				<span style="--primary: var(--purple);" class="header-elmnt" data-color="3">&gt;</span>
-				<span style="--primary: var(--yellow);" class="header-elmnt" data-color="4">Learn</span> <span style="--primary: var(--red);" class="header-elmnt" data-color="5">Code</span>
-			</h2>
-			<p class="header-desc">Creative web projects that’ll teach you HTML, CSS, and JavaScript.</p>
-		</div>
-
-		<div class="tutorial" id="tutorial">
-			<h3 class="home-heading"><a href="#tutorial"><span class="symbol">&#xe242;</span> Here’s how it works</a></h3>
-			<div class="tutorial-steps">
-				<div class="tutorial-step">
-					<img src="/assets/graphics/intro-1.svg">
-					<div class="tutorial-step-heading">
-						<div class="tutorial-step-number">1</div>
-						<h4 class="tutorial-step-title">Take on a creative coding project</h4>
-					</div>
-					<p>
-						Projects are organized by unit and color-coded by difficulty. If you go in order, you’ll find that the skills you learned in one project will directly apply to the next one!
-					</p>
-					<div class="tutorial-spacer"></div>
-					<a href="#units" class="tutorial-link"><span class="symbol">&#xe3c9;</span> Check out the projects!</a>
-				</div>
-
-				<div class="tutorial-step">
-					<img src="/assets/graphics/intro-2.svg">
-					<div class="tutorial-step-heading">
-						<div class="tutorial-step-number">2</div>
-						<h4 class="tutorial-step-title">Write code directly in your web browser</h4>
-					</div>
-					<p>
-						Study and edit dozens of HTML files without leaving this website! Analyze examples of finished projects, read through annotated code demos, and start your own projects from pre-built templates. After the first few projects, you’ll also learn how to code using a text editor and launch your own website!
-					</p>
-					<div class="tutorial-spacer"></div>
-					<a href="/editor/" class="tutorial-link" target="_blank"><span class="symbol">&#xe86f;</span> Check out a demo!</a>
-				</div>
-
-				<div class="tutorial-step">
-					<img src="/assets/graphics/intro-3.svg">
-					<div class="tutorial-step-heading">
-						<div class="tutorial-step-number">3</div>
-						<h4 class="tutorial-step-title">Learn how to use the same resources that professionals rely on</h4>
-					</div>
-					<p>
-						As you’re working on a project, you’ll find links to helpful resources that real developers use everyday. There’s no pressure to memorize everything you learn — even professional coders constantly rely on the Internet for help!
-					</p>
-					<div class="tutorial-spacer"></div>
-					<a href="/units/1/" class="tutorial-link"><span class="symbol">&#xf82f;</span> Ready? Let’s go!</a>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<div class="section-divider"></div>
-
-	<section class="home-units" id="units">
-		<h2 class="home-heading"><a href="#units"><span class="symbol">&#xe9b0;</span> Choose a unit!</a></h2>
-		<div class="home-units-list">
-			<a href="/units/1/" class="home-units-link" style="--primary: var(--pink);">
-				<div class="home-units-number">Unit <span>1</span></div>
-				<h3 class="home-units-name">What even is a website?</h3>
-				<p class="home-units-desc">
-					This is a description of the first unit! It’s not done yet, but when it is I’ll put in here. Check back later!
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>test-project-1.html</title>
+			<link rel="stylesheet" href="style.css">
+		</head>
+		<body>
+			<header class="header">
+				<h1 class="header-title">test-project-1.html</h1>
+				<p class="header-desc">
+					Creative coding projects for any skill level. By&nbsp;<a href="https://gdwithgd.com/" target="_blank">GD&nbsp;with&nbsp;GD</a>.
 				</p>
-				<div class="home-units-projects">
-					<h4>Projects</h4>
-					<div class="home-units-projects-list">
-						<div><span>1.1</span> ascii-art.html</div>
-						<div><span>1.2</span> concrete-poetry.html</div>
-						<div><span>1.3</span> self-portrait.html</div>
-						<div><span>1.4</span> blog-post.html</div>
+			</header>
+		
+			<main class="projects">
+				
+			<div class="project" data-rating="0" data-active="0" id="ascii-art">
+				<div class="project-link">
+					<div class="project-link-number">1.1</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">ascii-art.html</span>
+								<span class="project-link-title-desc">Turn text into art!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">ascii-art.html</span>
+					<span class="project-link-title-desc">Turn text into art!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">ascii-art.html</span>
+					<span class="project-link-title-desc">Turn text into art!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">ascii-art.html</span>
+					<span class="project-link-title-desc">Turn text into art!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">ascii-art.html</span>
+					<span class="project-link-title-desc">Turn text into art!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">ascii-art.html</span>
+					<span class="project-link-title-desc">Turn text into art!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>How text works on websites</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=ascii-art" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/ascii-art.html"></iframe>
+						</div>
 					</div>
 				</div>
-			</a>
-
-			<a href="/units/2/" class="home-units-link" style="--primary: var(--green);">
-				<div class="home-units-number">Unit <span>2</span></div>
-				<h3 class="home-units-name">Coming soon!</h3>
-				<p class="home-units-desc">
-					Check back later for updates!
-				</p>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-					</div>
-				</div>
-			</a>
-
-			<a href="/units/3/" class="home-units-link" style="--primary: var(--blue);">
-				<div class="home-units-number">Unit <span>3</span></div>
-				<h3 class="home-units-name">Coming soon!</h3>
-				<p class="home-units-desc">
-					Check back later for updates!
-				</p>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-					</div>
-				</div>
-			</a>
-
-			<a href="/units/4/" class="home-units-link" style="--primary: var(--yellow);">
-				<div class="home-units-number">Unit <span>4</span></div>
-				<h3 class="home-units-name">Coming soon!</h3>
-				<p class="home-units-desc">
-					Check back later for updates!
-				</p>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="0"></div>
-						<div data-active="0"></div>
-					</div>
-				</div>
-			</a>
-
-
-			<a href="/units/5/" class="home-units-link" style="--primary: var(--purple);">
-				<div class="home-units-number">Unit <span>5</span></div>
-				<h3 class="home-units-name">Coming soon!</h3>
-				<p class="home-units-desc">
-					Check back later for updates!
-				</p>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="0"></div>
-					</div>
-				</div>
-			</a>
-
-
-			<a href="/units/6/" class="home-units-link" style="--primary: var(--red);">
-				<div class="home-units-number">Unit <span>6</span></div>
-				<h3 class="home-units-name">Coming soon!</h3>
-				<p class="home-units-desc">
-					Check back later for updates!
-				</p>
-				<div class="home-units-rating">
-					<h4>Difficulty</h4>
-					<div class="home-units-rating-dots">
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-						<div data-active="1"></div>
-					</div>
-				</div>
-			</a>
-		</div>
-	</section>
-
-	<div class="section-divider"></div>
-
-	<section id="about" class="about">
-		<h2 class="home-heading"><a href="#about"><span class="symbol">&#xe0e0;</span> About this site</a></h2>
-		<div class="about-text">
-			<p>
-				Hi there! My name is Gabriel. I’m a designer, coder, and teacher, and I created <em>test-project-1.html</em>.
-			</p>
-			<p>
-				In my experience teaching, I’ve had trouble finding resources to help my students learn to code. There is no shortage of websites that will teach you to code, but these websites assume that you want to become a full-time developer. What if you want to be a full-time designer that just uses code as a creative medium?
-			</p>
-			<p>
-				I created <em>test-project-1.html</em> to fill that void. On this website, you’ll discover that no matter how skilled you are as a coder, there is always something creative you can make.
-			</p>
-			<p style="text-align: center;">
-				* * *
-			</p>
-			<p>
-				When I teach code, I demonstrate what a website is by creating a file called “test-project-1.html“. This website is named after that file.
-			</p>
-			<p>
-				I’d love to hear your feedback! Whether you’re a student, teacher, or just someone interested in creative coding, send me a message at <a href="mailto:gabriel@noreplica.com">gabriel@noreplica.com</a>.
-			</p>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<div>
-			<div class="footer-copyright">
-				© <span id="footer-year">2023</span> GD with GD<br>
-				All Rights Reserved
 			</div>
-			<div class="footer-credits">
-				Site design and development by <a href="https://gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a>
+		
+			<div class="project" data-rating="0" data-active="0" id="programmatic-poetry">
+				<div class="project-link">
+					<div class="project-link-number">1.2</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">programmatic-poetry.html</span>
+								<span class="project-link-title-desc">Conjure a poem through code!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">programmatic-poetry.html</span>
+					<span class="project-link-title-desc">Conjure a poem through code!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">programmatic-poetry.html</span>
+					<span class="project-link-title-desc">Conjure a poem through code!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">programmatic-poetry.html</span>
+					<span class="project-link-title-desc">Conjure a poem through code!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">programmatic-poetry.html</span>
+					<span class="project-link-title-desc">Conjure a poem through code!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">programmatic-poetry.html</span>
+					<span class="project-link-title-desc">Conjure a poem through code!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>HTML elements for typography</div><div>Inline CSS</div><div>CSS styles for typography</div><div>CSS colors</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=programmatic-poetry" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/programmatic-poetry.html"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="footer-credits">
-				Typeset in Red Hat Mono and Text by <a href="https://mckltype.com/" target="_blank">Jeremy Mickel (MCKL)</a>
+		
+			<div class="project" data-rating="0" data-active="0" id="text-textile">
+				<div class="project-link">
+					<div class="project-link-number">1.3</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">text-textile.html</span>
+								<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">text-textile.html</span>
+					<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">text-textile.html</span>
+					<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">text-textile.html</span>
+					<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">text-textile.html</span>
+					<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">text-textile.html</span>
+					<span class="project-link-title-desc">Tailor a tapestry of typography!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>CSS units</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=text-textile" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/text-textile.html"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="footer-links">
-			<h2>Units</h2>
-			<div>
-				<a href="/units/1/"><span class="symbol">&#xe3c9;</span> <span>Unit 1: What even is a website?</span></a>
-				<a href="/units/2/"><span class="symbol">&#xe3c9;</span> <span>Unit 2: Coming soon!</span></a>
-				<a href="/units/3/"><span class="symbol">&#xe3c9;</span> <span>Unit 3: Coming soon!</span></a>
-				<a href="/units/4/"><span class="symbol">&#xe3c9;</span> <span>Unit 4: Coming soon!</span></a>
-				<a href="/units/5/"><span class="symbol">&#xe3c9;</span> <span>Unit 5: Coming soon!</span></a>
-				<a href="/units/6/"><span class="symbol">&#xe3c9;</span> <span>Unit 6: Coming soon!</span></a>
+		
+			<div class="project" data-rating="0" data-active="0" id="interconnected-images">
+				<div class="project-link">
+					<div class="project-link-number">1.4</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">interconnected-images.html</span>
+								<span class="project-link-title-desc">Assemble an exhibition!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">interconnected-images.html</span>
+					<span class="project-link-title-desc">Assemble an exhibition!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">interconnected-images.html</span>
+					<span class="project-link-title-desc">Assemble an exhibition!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">interconnected-images.html</span>
+					<span class="project-link-title-desc">Assemble an exhibition!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">interconnected-images.html</span>
+					<span class="project-link-title-desc">Assemble an exhibition!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">interconnected-images.html</span>
+					<span class="project-link-title-desc">Assemble an exhibition!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Links</div><div>Images</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=interconnected-images" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/interconnected-images.html"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="footer-links">
-			<h2>More from GD with GD</h2>
-			<div>
-				<a target="_blank" href="https://babysteps.gdwithgd.com/"><span class="symbol">&#xe157;</span> <span>Baby Steps</span></a>
-				<a target="_blank" href="https://noreplica.com/"><span class="symbol">&#xe157;</span> <span>No Replica</span></a>
-				<a target="_blank" href="https://toomuchtype.com/"><span class="symbol">&#xe157;</span> <span>Too Much Type</span></a>
-				<!-- <a target="_blank" href="https://gdwithgd.com/"><span class="symbol">&#xe157;</span> <span>GD with GD</span></a> -->
-				<!-- <a target="_blank" href="https://tsio.org/"><span class="symbol">&#xe157;</span> <span>TSIO</span></a> -->
+		
+			<div class="project" data-rating="1" data-active="0" id="pixelated-pattern">
+				<div class="project-link">
+					<div class="project-link-number">2.1</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">pixelated-pattern.html</span>
+								<span class="project-link-title-desc">Design a digital decoration!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">pixelated-pattern.html</span>
+					<span class="project-link-title-desc">Design a digital decoration!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">pixelated-pattern.html</span>
+					<span class="project-link-title-desc">Design a digital decoration!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">pixelated-pattern.html</span>
+					<span class="project-link-title-desc">Design a digital decoration!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">pixelated-pattern.html</span>
+					<span class="project-link-title-desc">Design a digital decoration!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">pixelated-pattern.html</span>
+					<span class="project-link-title-desc">Design a digital decoration!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>The box model</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=pixelated-pattern" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/pixelated-pattern.html"></iframe>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</footer>
+		
+			<div class="project" data-rating="1" data-active="0" id="brilliant-blog">
+				<div class="project-link">
+					<div class="project-link-number">2.2</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">brilliant-blog.html</span>
+								<span class="project-link-title-desc">Author an amazing article!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">brilliant-blog.html</span>
+					<span class="project-link-title-desc">Author an amazing article!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">brilliant-blog.html</span>
+					<span class="project-link-title-desc">Author an amazing article!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">brilliant-blog.html</span>
+					<span class="project-link-title-desc">Author an amazing article!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">brilliant-blog.html</span>
+					<span class="project-link-title-desc">Author an amazing article!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">brilliant-blog.html</span>
+					<span class="project-link-title-desc">Author an amazing article!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Basic page layout</div><div>CSS classes</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=brilliant-blog" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/brilliant-blog.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="project" data-rating="1" data-active="0" id="geometric-garden">
+				<div class="project-link">
+					<div class="project-link-number">2.3</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">geometric-garden.html</span>
+								<span class="project-link-title-desc">Sprout flowers with style!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">geometric-garden.html</span>
+					<span class="project-link-title-desc">Sprout flowers with style!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">geometric-garden.html</span>
+					<span class="project-link-title-desc">Sprout flowers with style!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">geometric-garden.html</span>
+					<span class="project-link-title-desc">Sprout flowers with style!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">geometric-garden.html</span>
+					<span class="project-link-title-desc">Sprout flowers with style!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">geometric-garden.html</span>
+					<span class="project-link-title-desc">Sprout flowers with style!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Hover and active states</div><div>The “transition” property</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=geometric-garden" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/geometric-garden.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="project" data-rating="1" data-active="0" id="movie-marquees">
+				<div class="project-link">
+					<div class="project-link-number">2.4</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">movie-marquees.html</span>
+								<span class="project-link-title-desc">Animate with ease!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">movie-marquees.html</span>
+					<span class="project-link-title-desc">Animate with ease!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">movie-marquees.html</span>
+					<span class="project-link-title-desc">Animate with ease!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">movie-marquees.html</span>
+					<span class="project-link-title-desc">Animate with ease!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">movie-marquees.html</span>
+					<span class="project-link-title-desc">Animate with ease!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">movie-marquees.html</span>
+					<span class="project-link-title-desc">Animate with ease!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Keyframed animations</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=movie-marquees" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/movie-marquees.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="project" data-rating="1" data-active="0" id="personal-portrait">
+				<div class="project-link">
+					<div class="project-link-number">2.5</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">personal-portrait.html</span>
+								<span class="project-link-title-desc">Make a mathematical mirror!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">personal-portrait.html</span>
+					<span class="project-link-title-desc">Make a mathematical mirror!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">personal-portrait.html</span>
+					<span class="project-link-title-desc">Make a mathematical mirror!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">personal-portrait.html</span>
+					<span class="project-link-title-desc">Make a mathematical mirror!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">personal-portrait.html</span>
+					<span class="project-link-title-desc">Make a mathematical mirror!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">personal-portrait.html</span>
+					<span class="project-link-title-desc">Make a mathematical mirror!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Relative and absolute positioning</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=personal-portrait" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/personal-portrait.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="project" data-rating="1" data-active="0" id="sticky-sayings">
+				<div class="project-link">
+					<div class="project-link-number">2.6</div>
+					<div class="project-link-content">
+						<div class="project-link-title-container">
+							<h2 class="project-link-title">
+								<span class="project-link-title-file">sticky-sayings.html</span>
+								<span class="project-link-title-desc">Combine sentences into stories!</span>
+							</h2>
+							
+				<div class="project-link-title">
+					<span class="project-link-title-file">sticky-sayings.html</span>
+					<span class="project-link-title-desc">Combine sentences into stories!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">sticky-sayings.html</span>
+					<span class="project-link-title-desc">Combine sentences into stories!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">sticky-sayings.html</span>
+					<span class="project-link-title-desc">Combine sentences into stories!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">sticky-sayings.html</span>
+					<span class="project-link-title-desc">Combine sentences into stories!</span>
+				</div>
+			
+				<div class="project-link-title">
+					<span class="project-link-title-file">sticky-sayings.html</span>
+					<span class="project-link-title-desc">Combine sentences into stories!</span>
+				</div>
+			
+						</div>
+						<div class="project-link-info">
+							<div class="project-link-info-rating">
+								<h3 class="project-link-info-title">Difficulty</h3>
+								<div class="project-link-info-rating-list">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div class="project-link-info-divider"></div>
+							<div class="project-link-info-tags">
+								<h3 class="project-link-info-title">Topics</h3>
+								<div class="project-link-info-tags-list">
+									<div>Sticky positioning</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-details-container">
+					<div class="project-details">
+						<div>
+							<div class="project-details-info">
+								<p>Description coming soon!</p>
+							</div>
+							<div class="project-details-links">
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=sticky-sayings" target="_blank">
+									<span>See an example</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+								<a href="https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1" target="_blank">
+									<span>Start the project</span>
+									<span class="symbol">&#xf1e1;</span>
+								</a>
+							</div>
+						</div>
+						<div>
+							<iframe class="project-details-preview" src="https://demoland.gdwithgd.com/editor/demos/test-project-1/sticky-sayings.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			</main>
 
-	<script src="script.js"></script>
-	<script src="home.js"></script>
-</body>
-</html>
-
-
-
-<!-- TODO -->
-<!-- Write node scripts to generate pages and following elements: -->
-	<!-- TOC -->
-	<!-- footer -->
-	<!-- site build time/date? -->
-<!-- need a json for units -->
+			<footer class="footer">
+				<p>
+					Colophon: <a href="https://www.redhat.com/en/about/brand/standards/typography" target="_blank">Red Hat</a> by <a href="https://mckltype.com/" target="_blank">MCKL</a> and <a href="https://fonts.google.com/icons" target="_blank">Google Material Symbols</a>.
+				</p>
+			</footer>
+			
+			<script src="script.js"></script>
+		</body>
+		</html>
+	

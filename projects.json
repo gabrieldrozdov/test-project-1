@@ -1,901 +1,137 @@
 {
 	"ascii-art.html": {
-		"unit": 1,
+		"id": "ascii-art",
 		"number": "1.1",
-		"outcomes": [
-			"What HTML is",
-			"How HTML responds to the browser window",
-			"Basic HTML syntax"
-		],
+		"tagline": "Turn text into art!",
+		"desc": "<p>Description coming soon!</p>",
 		"rating": 0,
-		"lead-in": "Learn how code works:",
-		"prompt": "Create a piece of ASCII art in HTML",
-		"desc": {
-			"Prompt": "<p>In this exercise, we won’t care what the live website looks like. Instead, our goal is to create art inside the code itself. We’ll do this by using letters and punctuation marks to create something called <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-ascii-art-wikipedia`)'>ASCII art</span>. The term <em>ASCII</em> stands for “American Standard Code for Information Interchange” and is a protocol that converts a computer’s binary into normal letters.</p><p>Using only the letters, numbers, and symbols on your keyboard, create an image of your choosing! If you want some inspiration, check out the <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-ascii-art-archive`)'>ASCII Art Archive</span> or one of the generators linked to for this exercise. What you create is up to you — a drawing, an icon, or maybe even some <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-text-to-ascii-art-generator`)'>word art</span>!</p>",
-			"Background": "<p>What is a website? At the most basic level, a website is made out of code. Code is just text — specifically, text without any formatting, a.k.a. <em>plain text</em> — that tells a computer how to do something. There are many languages for code depending on the computer and context, just like there are more languages for writing and speaking to other people. For websites, the main <em>programming language</em> is <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html`)'>HTML</span>.</p><p>HTML is all about organizing information for a web browser to understand. HTML accomplishes this by organizing types of information into things called  <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-elements`)'>HTML elements</span>. Typically, HTML elements are denoted by a start and end point. These are called <em>HTML tags</em> and are indicated inside of angle brackets (i.e. the &lt; and &gt; symbols). For example, you can indicate that some text should be emphasized using the <em>em</em> element, which would look like this:</p><p>&lt;em&gt;<em>Here’s some italicized text</em>&lt;/em&gt;</p><p>But, you don’t see HTML tags on live websites — they’re invisible! When we design and develop websites, we provide instructions to the web browser and have to trust it to understand what we want.</p>",
-			"Questions to Explore": "<p><em>What happens if you try to press “return” or ”enter” to <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-br`)'>break</span> to a new line?</em></p><p><em>What happens if you try to add multiple spaces in a row? (Hint: nothing happens! How can you add multiple <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-entities`)'>spaces</span> in a row?)</em></p><p><em>How can you <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-em`)'>italicize</span> or <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-strong`)'>bold</span> text on the live website?</em></p><p><em>Is everything in your HTML file <span class='project-desc-highlight' onclick='highlightResource(`ascii-art-html-comments`)'>visible</span> on the live website?</em></p>"
-		},
-		"demo": "ascii-art-example.html",
-		"demos": [
-			{
-				"number": "1.1.1",
-				"name": "ascii-art-example.html",
-				"desc": "See the code for a finished project"
-			},
-			{
-				"number": "1.1.2",
-				"name": "ascii-art-template.html",
-				"desc": "Start the project using a template"
-			}
+		"tags": [
+			"How text works on websites"
 		],
-		"resources": {
-			"Concepts": {
-				"icon": "&#xe0e0;",
-				"blocks": [
-					{
-						"id": "html",
-						"display-text": "HTML",
-						"desc": "HyperText Markup Language, the main programming language of the web",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"],
-							["W3Schools", "https://www.w3schools.com/whatis/whatis_html.asp"]
-						]
-					},
-					{
-						"id": "html-elements",
-						"display-text": "HTML elements",
-						"desc": "Structuring an HTML document into discrete units of information",
-						"note": "",
-						"links": [
-							["W3Schools", "https://www.w3schools.com/html/html_elements.asp"],
-							["List of all HTML elements", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"]
-						]
-					},
-					{
-						"id": "html-entities",
-						"display-text": "HTML entities",
-						"desc": "Special notation for writing spaces, punctuation, and more in an HTML file",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Glossary/Entity"],
-							["W3Schools", "https://www.w3schools.com/html/html_entities.asp"],
-							["List of all HTML entities", "https://www.toptal.com/designers/htmlarrows/symbols/"]
-						]
-					},
-					{
-						"id": "html-comments",
-						"display-text": "HTML comments",
-						"desc": "Invisible notes inside an HTML file",
-						"note": "",
-						"links": [
-							["W3Schools", "https://www.w3schools.com/html/html_comments.asp"]
-						]
-					}
-				]
-			},
-			"Elements for Formatting Text": {
-				"icon": "&#xeb7e;",
-				"blocks": [
-					{
-						"id": "br",
-						"display-text": "&lt;br&gt;",
-						"desc": "Line breaks",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_br.asp"]
-						]
-					},
-					{
-						"id": "em",
-						"display-text": "&lt;em&gt; <span>___</span> &lt;/em&gt;",
-						"desc": "Italicized text",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_strong.asp"]
-						]
-					},
-					{
-						"id": "strong",
-						"display-text": "&lt;strong&gt; <span>___</span> &lt;/strong&gt;",
-						"desc": "Bolded text",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_strong.asp"]
-						]
-					},
-					{
-						"id": "pre",
-						"display-text": "&lt;pre&gt; <span>___</span> &lt;/pre&gt;",
-						"desc": "Italicized text",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_pre.asp"]
-						]
-					}
-				]
-			},
-			"ASCII Art Resources": {
-				"icon": "&#xe157;",
-				"blocks": [
-					{
-						"id": "ascii-art-wikipedia",
-						"display-text": "Wikipedia article on ASCII art",
-						"desc": "",
-						"note": "",
-						"links": [
-							["Read the article!", "https://en.wikipedia.org/wiki/ASCII_art"]
-						]
-					},
-					{
-						"id": "ascii-art-archive",
-						"display-text": "ASCII Art Archive",
-						"desc": "",
-						"note": "",
-						"links": [
-							["Visit the site!", "https://www.asciiart.eu/"]
-						]
-					},
-					{
-						"id": "image-to-ascii-art",
-						"display-text": "Image to ASCII Art",
-						"desc": "",
-						"note": "",
-						"links": [
-							["Visit the site!", "https://www.asciiart.eu/image-to-ascii"]
-						]
-					},
-					{
-						"id": "text-to-ascii-art-generator",
-						"display-text": "Text to ASCII Art Generator",
-						"desc": "",
-						"note": "",
-						"links": [
-							["Visit the site!", "https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20"]
-						]
-					}
-				]
-			}
-		}
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/ascii-art.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=ascii-art",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
 	},
-	"concrete-poetry.html": {
-		"unit": 1,
+	"programmatic-poetry.html": {
+		"id": "programmatic-poetry",
 		"number": "1.2",
-		"outcomes": [
-			"TBD"
-		],
+		"tagline": "Conjure a poem through code!",
+		"desc": "<p>Description coming soon!</p>",
 		"rating": 0,
-		"lead-in": "Play with typography:",
-		"prompt": "Typeset a poem in HTML and CSS",
-		"desc": {
-			"Prompt": "<p>Pick a poem from the <a href='https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added' target='_blank'>Poetry Foundation archives</a>. Typeset your poem using HTML elements and inline CSS.</p><p>Think about the design decisions that make sense for the poem you choose. Maybe you only want to make a few subtle changes to the default typography. Or, maybe you want something that looks like it’s out of a <a href='https://images.app.goo.gl/iWiyk7qP8Qpoe8ZA6' target='_blank'>Geronimo Stilton book</a>. That’s your decision!</p>"
-		},
-		"demo": "concrete-poetry-example.html",
-		"demos": [
-			{
-				"number": "1.2.1",
-				"name": "concrete-poetry-example.html",
-				"desc": "See the code for a finished project"
-			},
-			{
-				"number": "1.2.2",
-				"name": "concrete-poetry-template.html",
-				"desc": "Start the project using a template"
-			}
+		"tags": [
+			"HTML elements for typography",
+			"Inline CSS",
+			"CSS styles for typography",
+			"CSS colors"
 		],
-		"resources": {
-			"Concepts": {
-				"icon": "&#xe0e0;",
-				"blocks": [
-					{
-						"id": "html-attributes",
-						"display-text": "HTML attributes",
-						"desc": "Embedding information inside an HTML element",
-						"note": "",
-						"links": [
-							["W3Schools", "https://www.w3schools.com/html/html_attributes.asp"],
-							["List of all HTML attributes", "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"]
-						]
-					},
-					{
-						"id": "css",
-						"display-text": "CSS",
-						"desc": "Cascading Style Sheets, a programming language that lets you style HTML elements",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS"],
-							["W3Schools", "https://www.w3schools.com/css/css_intro.asp"]
-						]
-					},
-					{
-						"id": "css-properties",
-						"display-text": "CSS properties",
-						"desc": "A characteristic of an HTML element that you can define/redefine using CSS (e.g. color, font, font size, etc.)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Glossary/Property/CSS"],
-							["W3Schools", "https://www.w3schools.com/cssref/index.php"]
-						]
-					},
-					{
-						"id": "css-units",
-						"display-text": "CSS units",
-						"desc": "Units for specifying CSS properties like font size, width, height, and more",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"],
-							["W3Schools", "https://www.w3schools.com/cssref/css_units.php"]
-						]
-					},
-					{
-						"id": "css-colors",
-						"display-text": "CSS colors",
-						"desc": "Formats for specifying color in CSS",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/color"],
-							["W3Schools", "https://www.w3schools.com/cssref/css_colors_legal.php"],
-							["List of all named CSS colors", "https://www.w3schools.com/cssref/css_colors.php"]
-						]
-					}
-				]
-			},
-			"HTML Elements for Different Types of Text": {
-				"icon": "&#xeb7e;",
-				"blocks": [
-					{
-						"id": "p",
-						"display-text": "&lt;p&gt; <span>___</span> &lt;/p&gt;",
-						"desc": "Paragraph element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"],
-							["W3Schools", "https://www.w3schools.com/html/html_paragraphs.asp"]
-						]
-					},
-					{
-						"id": "h1-h6",
-						"display-text": "&lt;h1&gt; <span>___</span> &lt;/h1&gt;",
-						"desc": "Heading elements (&lt;h1&gt;-&lt;h6&gt;)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"],
-							["W3Schools", "https://www.w3schools.com/html/html_headings.asp"]
-						]
-					},
-					{
-						"id": "span",
-						"display-text": "&lt;span&gt; <span>___</span> &lt;/span&gt;",
-						"desc": "Generic inline container",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_span.asp"]
-						]
-					},
-					{
-						"id": "a",
-						"display-text": "&lt;a href='<span>___</span>'&gt; <span>___</span> &lt;/a&gt;",
-						"desc": "Anchor (link) element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_a.asp"]
-						]
-					}
-				]
-			},
-			"CSS Properties for Styling Text": {
-				"icon": "&#xeb93;",
-				"blocks": [
-					{
-						"id": "font-size",
-						"display-text": "font-size: <span>12px;</span>",
-						"desc": "Text size",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size"],
-							["W3Schools", "https://www.w3schools.com/css/css_font_size.asp"]
-						]
-					},
-					{
-						"id": "color",
-						"display-text": "color: <span>rgb(255, 0, 0);</span>",
-						"desc": "Text color",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/color"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_text_color.php"]
-						]
-					},
-					{
-						"id": "font-family",
-						"display-text": "font-family: <span>sans-serif;</span>",
-						"desc": "Typeface/font",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-family"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_font_font-family.php"]
-						]
-					},
-					{
-						"id": "font-style",
-						"display-text": "font-style: <span>italic;</span>",
-						"desc": "Italicization",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-style"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_font_font-style.php"]
-						]
-					},
-					{
-						"id": "font-weight",
-						"display-text": "font-weight: <span>bold;</span>",
-						"desc": "Boldness",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_font_weight.php"]
-						]
-					},
-					{
-						"id": "text-align",
-						"display-text": "text-align: <span>center;</span>",
-						"desc": "Left, right, center, and justified alignment",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_text_text-align.php"]
-						]
-					},
-					{
-						"id": "text-decoration",
-						"display-text": "text-decoration: <span>underline;</span>",
-						"desc": "Underline, overline, and more",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_text_text-decoration.php"]
-						]
-					},
-					{
-						"id": "line-height",
-						"display-text": "line-height: <span>1.2em;</span>",
-						"desc": "Space between lines of text (a.k.a. leading)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/line-height"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_line-height.php"]
-						]
-					},
-					{
-						"id": "letter-spacing",
-						"display-text": "letter-spacing: <span>.1em;</span>",
-						"desc": "Space between letters (a.k.a. tracking)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_text_letter-spacing.php"]
-						]
-					},
-					{
-						"id": "word-spacing",
-						"display-text": "word-spacing: <span>1em;</span>",
-						"desc": "Space between words",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_text_word-spacing.php"]
-						]
-					},
-					{
-						"id": "text-shadow",
-						"display-text": "text-shadow: <span>5px 5px 10px black;</span>",
-						"desc": "Drop shadow for text elements",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"],
-							["W3Schools", "https://www.w3schools.com/cssref/css3_pr_text-shadow.php"]
-						]
-					},
-					{
-						"id": "text-shadow",
-						"display-text": "text-shadow: <span>5px 5px 10px black;</span>",
-						"desc": "Writing direction (horizontal or vertical)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow"],
-							["W3Schools", "https://www.w3schools.com/cssref/css3_pr_text-shadow.php"]
-						]
-					},
-					{
-						"id": "text-emphasis",
-						"display-text": "text-emphasis: <span>filled red;</span>",
-						"desc": "Add emphasis marks to text",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis"],
-							["W3Schools", "https://www.w3schools.com/cssref/css3_pr_text-emphasis.php"]
-						]
-					}
-				]
-			}
-		}
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/programmatic-poetry.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=programmatic-poetry",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
 	},
-	"self-portrait.html": {
-		"unit": 1,
+	"text-textile.html": {
+		"id": "text-textile",
 		"number": "1.3",
-		"outcomes": [
-			"TBD"
-		],
+		"tagline": "Tailor a tapestry of typography!",
+		"desc": "<p>Description coming soon!</p>",
 		"rating": 0,
-		"lead-in": "Beyond typography:",
-		"prompt": "Code a self-portrait using &lt;div&gt; elements and absolute positioning",
-		"desc": {
-			"Prompt": "<p>Using only &lt;div&gt; elements and inline CSS, recreate your self-portrait on a website. You can position an element anywhere on the page by setting its CSS “position” property to ”absolute” and then using a combination of the “top”, “right”, “bottom”, and “left” properties.</p><p>If you’re having trouble getting started, I recommend starting by drawing a simple self-portrait using rectangles and ovals on a piece of paper. Use as many colors as you want, and decie whether your shapes should be filled-in, outlined, or both.</p>"
-		},
-		"demo": "self-portrait-example.html",
-		"demos": [
-			{
-				"number": "1.3.1",
-				"name": "self-portrait-example.html",
-				"desc": "See the code for a finished project"
-			},
-			{
-				"number": "1.3.2",
-				"name": "self-portrait-template.html",
-				"desc": "Start the project using a template"
-			}
+		"tags": [
+			"CSS units"
 		],
-		"resources": {
-			"Recap": {
-				"icon": "&#xe80c;",
-				"blocks": [
-					{
-						"id": "css-units",
-						"display-text": "CSS units",
-						"desc": "Units for specifying CSS properties like font size, width, height, and more",
-						"note": "",
-						"links": [
-							["MDN", "https://www.w3schools.com/html/html_attributes.asp"],
-							["W3Schools", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"]
-						]
-					},
-					{
-						"id": "css-colors",
-						"display-text": "CSS colors",
-						"desc": "Formats for specifying color in CSS",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/color"],
-							["W3Schools", "https://www.w3schools.com/cssref/css_colors_legal.php"],
-							["List of named CSS colors", "https://www.w3schools.com/cssref/css_colors.php"]
-						]
-					}
-				]
-			},
-			"A New HTML Element": {
-				"icon": "&#xeb7e;",
-				"blocks": [
-					{
-						"id": "div",
-						"display-text": "&lt;div&gt; <span>___</span> &lt;/div&gt;",
-						"desc": "Generic block element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_div.ASP"]
-						]
-					}
-				]
-			},
-			"CSS Properties for Moving Elements Around": {
-				"icon": "&#xeb93;",
-				"blocks": [
-					{
-						"id": "position",
-						"display-text": "position: <span>absolute;</span>",
-						"desc": "Manually setting an element’s position on the page (or inside another element)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"],
-							["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
-						]
-					},
-					{
-						"id": "top",
-						"display-text": "top: <span>0px;</span>",
-						"desc": "Distance from the top of the page (or parent element)",
-						"note": "Does not work for elements with “position: static;” (default value)",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"],
-							["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
-						]
-					},
-					{
-						"id": "bottom",
-						"display-text": "bottom: <span>20vh;</span>",
-						"desc": "Distance from the bottom of the page (or parent element)",
-						"note": "Does not work for elements with “position: static;” (default value)",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"],
-							["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
-						]
-					},
-					{
-						"id": "left",
-						"display-text": "left: <span>40px;</span>",
-						"desc": "Distance from the left side of the page (or parent element)",
-						"note": "Does not work for elements with “position: static;” (default value)",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"],
-							["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
-						]
-					},
-					{
-						"id": "right",
-						"display-text": "right: <span>10vw;</span>",
-						"desc": "Distance from the right side of the page (or parent element)",
-						"note": "Does not work for elements with “position: static;” (default value)",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"],
-							["W3Schools", "https://www.w3schools.com/css/css_positioning.asp"]
-						]
-					},
-					{
-						"id": "transform",
-						"display-text": "transform: <span>rotate(30deg) scale(.8);</span>",
-						"desc": "Rotate, translate, scale, or skew an element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/transform"],
-							["W3Schools", "https://www.w3schools.com/cssref/css3_pr_transform.php"]
-						]
-					},
-					{
-						"id": "z-index",
-						"display-text": "z-index: <span>9;</span>",
-						"desc": "Stacking order for layered elements",
-						"note": "Does not work for elements with “position: static;” (default value)",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/z-index"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_pos_z-index.php"]
-						]
-					}
-				]
-			},
-			"CSS Properties for Styling Elements": {
-				"icon": "&#xeb93;",
-				"blocks": [
-					{
-						"id": "width",
-						"display-text": "width: <span>200px;</span>",
-						"desc": "Width (affected by “box-sizing” property)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/width"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_width.php"]
-						]
-					},
-					{
-						"id": "height",
-						"display-text": "height: <span>20vh;</span>",
-						"desc": "Height (affected by “box-sizing” property)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/height"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_height.php"]
-						]
-					},
-					{
-						"id": "background-color",
-						"display-text": "background-color: <span>hsl(120deg, 100%, 50%);</span>",
-						"desc": "Background color",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/background-color"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_background-color.php"]
-						]
-					},
-					{
-						"id": "border-width",
-						"display-text": "border-width: <span>4px;</span>",
-						"desc": "Size of border around an element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border-width"],
-							["W3Schools", "https://www.w3schools.com/css/css_border_width.asp"]
-						]
-					},
-					{
-						"id": "border-style",
-						"display-text": "border-style: <span>dotted;</span>",
-						"desc": "Type of border around an element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"],
-							["W3Schools", "https://www.w3schools.com/css/css_border.asp"]
-						]
-					},
-					{
-						"id": "border-color",
-						"display-text": "border-color: <#32a1ce;</span>",
-						"desc": "Color of border around an element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border-color"],
-							["W3Schools", "https://www.w3schools.com/css/css_border_color.asp"]
-						]
-					},
-					{
-						"id": "border",
-						"display-text": "border: <span>1px solid black;</span>",
-						"desc": "Shorthand for setting all border properties at once",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_border.php"]
-						]
-					},
-					{
-						"id": "border-radius",
-						"display-text": "border-radius: <span>20px;</span>",
-						"desc": "Rounded corners",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"],
-							["W3Schools", "https://www.w3schools.com/cssref/css3_pr_border-radius.php"]
-						]
-					},
-					{
-						"id": "box-sizing",
-						"display-text": "box-sizing: <span>border-box;</span>",
-						"desc": "Change how an element’s width and height are calculated",
-						"note": "By default, the border width is NOT included in this calculation",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing"],
-							["W3Schools", "https://www.w3schools.com/css/css3_box-sizing.asp"]
-						]
-					}
-				]
-			}
-		}
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/text-textile.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=text-textile",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
 	},
-	"wikipedia-article.html": {
-		"unit": 1,
+	"interconnected-images.html": {
+		"id": "interconnected-images",
 		"number": "1.4",
-		"outcomes": [
-			"TBD"
+		"tagline": "Assemble an exhibition!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 0,
+		"tags": [
+			"Links", "Images"
 		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/interconnected-images.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=interconnected-images",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"pixelated-pattern.html": {
+		"id": "pixelated-pattern",
+		"number": "2.1",
+		"tagline": "Design a digital decoration!",
+		"desc": "<p>Description coming soon!</p>",
 		"rating": 1,
-		"lead-in": "Thinking about the user:",
-		"prompt": "Design the page for a Wikipedia article",
-		"desc": {
-			"Background": "<p>Coming soon!</p>"
-		},
-		"demo": "wikipedia-article-example.html",
-		"demos": [
-			{
-				"number": "1.4.1",
-				"name": "wikipedia-article-example.html",
-				"desc": "See the code for a finished project"
-			},
-			{
-				"number": "1.4.2",
-				"name": "wikipedia-article-template.html",
-				"desc": "Start the project using a template"
-			}
+		"tags": [
+			"The box model"
 		],
-		"resources": {
-			"Concepts": {
-				"icon": "&#xe0e0;",
-				"blocks": [
-					{
-						"id": "internal-css",
-						"display-text": "Internal CSS",
-						"desc": "Defining CSS inside an HTML document using the &lt;style&gt; element",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured#internal_stylesheet"],
-							["W3Schools", "https://www.w3schools.com/css/css_howto.asp"]
-						]
-					},
-					{
-						"id": "css-box-model",
-						"display-text": "CSS box model",
-						"desc": "The way every HTML element is arranged, positioned, and displayed on the page",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model"],
-							["W3Schools", "https://www.w3schools.com/css/css_boxmodel.asp"]
-						]
-					},
-					{
-						"id": "html-file-paths",
-						"display-text": "HTML file paths",
-						"desc": "How to link to other content, like images",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"],
-							["W3Schools", "https://www.w3schools.com/html/html_filepaths.asp"]
-						]
-					}
-				]
-			},
-			"HTML Elements for Organizing Information": {
-				"icon": "&#xeb7e;",
-				"blocks": [
-					{
-						"id": "head",
-						"display-text": "&lt;head&gt; <span>___</span> &lt;/head&gt;",
-						"desc": "Document metadata",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"],
-							["W3Schools", "https://www.w3schools.com/html/html_head.asp"]
-						]
-					},
-					{
-						"id": "style",
-						"display-text": "&lt;style&gt; <span>___</span> &lt;/style&gt;",
-						"desc": "Internal CSS",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_style.asp"]
-						]
-					},
-					{
-						"id": "body",
-						"display-text": "&lt;body&gt; <span>___</span> &lt;/body&gt;",
-						"desc": "Visible content",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_body.asp"]
-						]
-					},
-					{
-						"id": "main",
-						"display-text": "&lt;main&gt; <span>___</span> &lt;/main&gt;",
-						"desc": "Works just like a &lt;div&gt;, but indicates the main content of the page",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_main.asp"]
-						]
-					},
-					{
-						"id": "section",
-						"display-text": "&lt;section&gt; <span>___</span> &lt;/section&gt;",
-						"desc": "Works just like a &lt;div&gt;, but indicates a section of content",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_section.asp"]
-						]
-					},
-					{
-						"id": "ul",
-						"display-text": "&lt;ul&gt; <span>___</span> &lt;/ul&gt;",
-						"desc": "Unordered (bulleted) lists",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_ul.asp"]
-						]
-					},
-					{
-						"id": "ol",
-						"display-text": "&lt;ol&gt; <span>___</span> &lt;/ol&gt;",
-						"desc": "Ordered (numbered) lists",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_ol.asp"]
-						]
-					},
-					{
-						"id": "li",
-						"display-text": "&lt;li&gt; <span>___</span> &lt;/li&gt;",
-						"desc": "List items",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li"],
-							["W3Schools", "https://www.w3schools.com/tags/tag_li.asp"]
-						]
-					},
-					{
-						"id": "table",
-						"display-text": "&lt;table&gt; <span>___</span> &lt;/table&gt;",
-						"desc": "Tables (a.k.a. spreadsheets)",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics"],
-							["W3Schools", "https://www.w3schools.com/html/html_tables.asp"]
-						]
-					}
-				]
-			},
-			"CSS Properties for Laying Out Elements": {
-				"icon": "&#xeb93;",
-				"blocks": [
-					{
-						"id": "margin",
-						"display-text": "margin: <span>20px;</span>",
-						"desc": "Space outside an element (outside the border)",
-						"note": "Individual margins can be set with “margin-top”, “margin-bottom”, “margin-left”, and “margin-right”",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/margin"],
-							["W3Schools", "https://www.w3schools.com/css/css_margin.asp"]
-						]
-					},
-					{
-						"id": "padding",
-						"display-text": "padding: <span>5px;</span>",
-						"desc": "Space inside an element (inside the border)",
-						"note": "Individual paddings can be set with “padding-top”, “padding-bottom”, “padding-left”, and “padding-right”",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/padding"],
-							["W3Schools", "https://www.w3schools.com/css/css_padding.asp"]
-						]
-					},
-					{
-						"id": "max-width",
-						"display-text": "max-width: <span>600px;</span>",
-						"desc": "Maximum width",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/max-width"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_max-width.php"]
-						]
-					},
-					{
-						"id": "min-width",
-						"display-text": "min-width: <span>200px;</span>",
-						"desc": "Minimum width",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/min-width"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_min-width.php"]
-						]
-					},
-					{
-						"id": "max-height",
-						"display-text": "max-height: <span>100vh;</span>",
-						"desc": "Maximum height",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/max-height"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_max-height.php"]
-						]
-					},
-					{
-						"id": "min-height",
-						"display-text": "min-height: <span>10em;</span>",
-						"desc": "Minimum height",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/min-height"],
-							["W3Schools", "https://www.w3schools.com/cssref/pr_dim_min-height.php"]
-						]
-					},
-					{
-						"id": "columns",
-						"display-text": "columns: <span>2;</span>",
-						"desc": "Columns of text",
-						"note": "",
-						"links": [
-							["MDN", "https://developer.mozilla.org/en-US/docs/Web/CSS/columns"],
-							["W3Schools", "https://www.w3schools.com/css/css3_multiple_columns.asp"]
-						]
-					}
-				]
-			}
-		}
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/pixelated-pattern.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=pixelated-pattern",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"brilliant-blog.html": {
+		"id": "brilliant-blog",
+		"number": "2.2",
+		"tagline": "Author an amazing article!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 1,
+		"tags": [
+			"Basic page layout",
+			"CSS classes"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/brilliant-blog.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=brilliant-blog",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"geometric-garden.html": {
+		"id": "geometric-garden",
+		"number": "2.3",
+		"tagline": "Sprout flowers with style!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 1,
+		"tags": [
+			"Hover and active states",
+			"The “transition” property"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/geometric-garden.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=geometric-garden",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"movie-marquees.html": {
+		"id": "movie-marquees",
+		"number": "2.4",
+		"tagline": "Animate with ease!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 1,
+		"tags": [
+			"Keyframed animations"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/movie-marquees.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=movie-marquees",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"personal-portrait.html": {
+		"id": "personal-portrait",
+		"number": "2.5",
+		"tagline": "Make a mathematical mirror!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 1,
+		"tags": [
+			"Relative and absolute positioning"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/personal-portrait.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=personal-portrait",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"sticky-sayings.html": {
+		"id": "sticky-sayings",
+		"number": "2.6",
+		"tagline": "Combine sentences into stories!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 1,
+		"tags": [
+			"Sticky positioning"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/sticky-sayings.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=sticky-sayings",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
 	}
 }
