@@ -133,5 +133,71 @@
 		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/sticky-sayings.html",
 		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=sticky-sayings",
 		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"disco-dancer.html": {
+		"id": "disco-dancer",
+		"number": "3.1",
+		"tagline": "TBD!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 2,
+		"tags": [
+			"@media Queries"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/disco-dancer.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=disco-dancer",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"grid-garden.html": {
+		"id": "grid-garden",
+		"number": "3.2",
+		"tagline": "TBD!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 2,
+		"tags": [
+			"CSS Grid"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/grid-garden.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=grid-garden",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"card-catalog.html": {
+		"id": "card-catalog",
+		"number": "3.3",
+		"tagline": "TBD!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 2,
+		"tags": [
+			"CSS Grid",
+			"@media Queries"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/card-catalog.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=card-catalog",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"brick-barrier.html": {
+		"id": "brick-barrier",
+		"number": "3.4",
+		"tagline": "TBD!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 2,
+		"tags": [
+			"Flexbox"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/brick-barrier.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=brick-barrier",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
+	},
+	"lonely-link.html": {
+		"id": "lonely-link",
+		"number": "3.5",
+		"tagline": "TBD!",
+		"desc": "<p>Description coming soon!</p>",
+		"rating": 2,
+		"tags": [
+			"Flexbox"
+		],
+		"preview-url": "https://demoland.gdwithgd.com/editor/demos/test-project-1/lonely-link.html",
+		"demo-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=lonely-link",
+		"template-url": "https://demoland.gdwithgd.com/editor/?collection=test-project-1&demo=test-project-1"
 	}
 }
